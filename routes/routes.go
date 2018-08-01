@@ -16,7 +16,8 @@ func HandleFunc(){
 
 	r.HandleFunc("/api/crud", controller.Insert).Methods("POST")
 	r.HandleFunc("/api/crud", controller.Delete).Methods("DELETE")
-	// r.HandleFunc("/api/crud", controller.Select).Methods("PUT")
+	r.HandleFunc("/api/crud", controller.Select).Methods("PUT")
 
 	log.Fatal(http.ListenAndServe(":8000", r))
 }
+
